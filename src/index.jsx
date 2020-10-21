@@ -507,11 +507,9 @@ export default class DatePicker extends React.Component {
             second: getSeconds(this.props.selected)
           });
         }
-        if (!this.props.inline) {
-          this.setState({
-            preSelection: changedDate
-          });
-        }
+        this.setState({
+          preSelection: changedDate
+        });
         if (!this.props.focusSelectedMonth) {
           this.setState({ monthSelectedIn: monthSelectedIn });
         }
